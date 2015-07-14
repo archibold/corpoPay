@@ -1,0 +1,10 @@
+<ion-view>
+	<ion-content>
+		<ion-list>
+			<ion-checkbox ng-repeat="contact in contacts" ng-model='checkStatus' ng-click='doIfChecked(checkStatus, contact)' ng-checked='contact.isAdd' ng-disabled="contact.isAdd">
+				<span>{{contact.contactName}}</span>
+			</ion-checkbox>
+		</ion-list>
+	</ion-content>
+<a class="button button-icon icon ion-arrow-return-left add-button" href="#/" ng-click="addToLoanList()"></a>
+</ion-view>

@@ -1,0 +1,2 @@
+<h3 class="center" ng-class="data.cash == 0 ? 'zero' : (data.cash > 0 ? 'plus': 'minus')">{{data.cash | customCurrency}}</h3>
+<input type="range" name="volume" min="-50" max="50" value="0" ng-init="data.cash =0" ng-model="data.cash">

@@ -1,0 +1,17 @@
+<ion-view>
+	<ion-content>
+		<ion-list>
+			<ion-item ng-repeat="loaner in loanList" ng-click="showPopup(loaner)">
+				<div class="row">
+				  <div class="col col-80">
+				  	<span>{{loaner.contactName}}</span>
+				  </div>
+				  <div class="col col-20">
+				  	<span ng-class="loaner.cash == 0 ? 'zero' : (loaner.cash > 0 ? 'plus': 'minus')" >{{loaner.cash | customCurrency}}</span>
+				  </div>
+				</div>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+	 <a class="button button-icon icon ion-plus-circled add-button" href="#/phoneList" ></a>
+</ion-view>
